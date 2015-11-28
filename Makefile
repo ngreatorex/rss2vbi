@@ -11,3 +11,6 @@ all: txt2vbi
 
 txt2vbi: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
+
+clean:
+	rm $(OBJ) txt2vbi
