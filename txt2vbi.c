@@ -2,8 +2,10 @@
  * http://www.unsatisfactorysoftware.co.uk
  */
  
-#include <malloc.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <sys/time.h>
 
@@ -56,7 +58,7 @@ int main(int argc, char **argv)
 			if(j > 0) {
 				for(i = 0; i < 40; i++) {
 					c = fgetc(fh);
-					if((c == EOF) || (c == 255)) eof = true;
+					if((c == EOF) || (c == (char)255)) eof = true;
 					if((eof != true) && (c != '\n')) {
 						buffer[i+2] = c;
 					} else {

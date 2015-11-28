@@ -4,7 +4,6 @@
  */
 
 #include <stdio.h>
-#include <malloc.h>
 #include <stdint.h>
 
 char hammed[16] = {	0x15, 0x02, 0x49, 0x5e,
